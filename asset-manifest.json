@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/KAAS-Healthcare/static/css/main.53ec0ce8.css",
-    "main.js": "/KAAS-Healthcare/static/js/main.d39c42b9.js",
+    "main.css": "/KAAS-Healthcare/static/css/main.3cedc40c.css",
+    "main.js": "/KAAS-Healthcare/static/js/main.8320dc16.js",
     "static/media/background.jpg": "/KAAS-Healthcare/static/media/background.8ddd8a8a12d6d587335d.jpg",
     "static/media/reviewImg.jpg": "/KAAS-Healthcare/static/media/reviewImg.a2d5d2c2fe30b717fb1e.jpg",
     "static/media/Bg.png": "/KAAS-Healthcare/static/media/Bg.306179e345c753ff47c1.png",
@@ -18,11 +18,11 @@
     "static/media/KAAS-logo-white.png": "/KAAS-Healthcare/static/media/KAAS-logo-white.f3d95f4f4563e33eee94.png",
     "static/media/thumb.png": "/KAAS-Healthcare/static/media/thumb.24001c2211f2a545a041.png",
     "index.html": "/KAAS-Healthcare/index.html",
-    "main.53ec0ce8.css.map": "/KAAS-Healthcare/static/css/main.53ec0ce8.css.map",
-    "main.d39c42b9.js.map": "/KAAS-Healthcare/static/js/main.d39c42b9.js.map"
+    "main.3cedc40c.css.map": "/KAAS-Healthcare/static/css/main.3cedc40c.css.map",
+    "main.8320dc16.js.map": "/KAAS-Healthcare/static/js/main.8320dc16.js.map"
   },
   "entrypoints": [
-    "static/css/main.53ec0ce8.css",
-    "static/js/main.d39c42b9.js"
+    "static/css/main.3cedc40c.css",
+    "static/js/main.8320dc16.js"
   ]
 }
