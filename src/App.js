@@ -1,19 +1,26 @@
 import { useEffect, useState } from "react";
-import { auth } from './firebase'
+import { auth } from './controller/firebase'
 import { onAuthStateChanged } from "firebase/auth";
 import React from "react";
 import Signup from "./signup/Signup";
 import { Routes, Route, BrowserRouter } from "react-router-dom"
 import Login from "./login/Login";
 import Landingpg from "./landingPage/LandingPg";
-import Appointment from "./Appointment/Doctor";
 import "./landingPage/landingPg.css";
 import "./login/Login.css";
 import "./signup/Signup.css";
-export default function App() {
+import { useFirebase } from "./controller/Firebaseprovider";
+import UserdataFetch from "./controller/fetch";
 
+export default function App() {
+    
+    // to avoid not signed in user from entering landing page--------------------------------------------------------------------------
+    const firebase = useFirebase();
+    
     const [user, setUser] = useState(null)
     useEffect(() => {
+        console.log("gdegeg");
+        firebase.fetchuserData();
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user)
@@ -21,44 +28,31 @@ export default function App() {
         });
         return () => unsubscribe();
     }, []);
+// --------------------------------------------------------------------------------------------------------
+
     if (user == null) {
         return (
             <div>
-                {/* 
-                <BrowserRouter>
-                    <Routes>
-                        <Route path='/signup' element={<Signup />} />
-                        <Route path='/' element={<Login />} />
-                        <Route path='/landingPage' element={<Login />} />
-                    </Routes>
-                </BrowserRouter> */}
                 <BrowserRouter basename={process.env.PUBLIC_URL}>
                     <Routes>
                         <Route path='/signup' element={<Signup />} />
                         <Route path='/' exact element={<Login />} />
                         <Route path='/landingPage' element={<Login />} />
-                        <Route path='/Appointment/Appointment' element={<Login />} />
+                        <Route path='/Appointment' element={<Login />} />
                     </Routes>
                 </BrowserRouter>
             </div>
         )
     }
+    
     else {
         return (
             <div>
-                {/* <BrowserRouter>
-                    <Routes>
-                        <Route path='/signup' element={<Signup />} />
-                        <Route path='/' element={<Login />} />
-                        <Route path='/landingPage' element={<Landingpg/>} />
-                        <Route path='/Appointment/Appointment' element={<Appointment />} />
-                    </Routes>
-                </BrowserRouter> */}
                 <BrowserRouter basename={process.env.PUBLIC_URL}>
                     <Routes>
                         <Route path='/signup' element={<Signup />} />
                         <Route path='/' exact element={<Login />} />
-                        <Route path='/Appointment/Appointment' element={<Appointment />} />
+                        <Route path='/Appointment' element={<UserdataFetch />} />
                         <Route path='/landingPage' element={<Landingpg />} />
                     </Routes>
                 </BrowserRouter>

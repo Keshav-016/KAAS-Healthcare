@@ -1,6 +1,6 @@
 .signup-bg-img {
     width: 100%;
-    height: 102vh;
+    height: 115vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -8,7 +8,7 @@
 }
 
 .signup-bg-shades {
-    height: 102vh;
+    height: 115vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.573);
     position: absolute;
@@ -56,7 +56,7 @@
     border: none;
     font-weight: bold;
     cursor: pointer;
-    margin-left: 35%;
+    margin-left: 38%;
     margin-top: 10px;
 }
 
@@ -73,6 +73,12 @@
     display: flex;
     gap: 40px;
     margin-top: 10px;
+}
+.signup-radio div{
+    margin-top: 20px;
+}
+.signup-radio span{
+    margin-top: 20px;
 }
 
 .signup-textarea {
@@ -94,7 +100,7 @@
 
 @media(max-width:800px) {
     .signup-title {
-        margin-top: 15%;
+        margin-top: 22%;
         font-size: 30px;
     }
 
@@ -110,12 +116,12 @@
     }
 
     .signup-button {
-        margin-left: 15%;
+        margin-left: 19%;
     }
 
     .signup-bg-shades,
     .signup-bg-img {
-        height: 165vh;
+        height: 140vh;
     }
 
     .signup-textarea {

@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import logo from "../images/KAAS-logo-white.png";
 import Bg from "../images/Bg.png";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth } from "../firebase";
+import { auth } from "../controller/firebase";
 import { useNavigate } from "react-router-dom";
-export default function Signup() {
 
+
+export default function Signup() {
     //to navigate/go to any page
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     //to set state of button to active and inactive
     const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
     // To throw message if any error occurs
@@ -15,31 +16,29 @@ export default function Signup() {
 
     //  Assigning values to the field
     const [user, setUser] = new useState
-    ({
-        firstName: "", lastName: "", password: "", address: "", state: "", district: "",
-        email: "", pincode: "", no: "", type: ""
-    });
+        ({
+            firstName: "", lastName: "", password: "", address: "", state: "", district: "",
+            email: "", pincode: "", no: "", speciality:"", exp:"", fee:"", type: "" 
+        });
 
     let name, value;
-    const handleInputs = (e) => 
-    {
+    const handleInputs = (e) => {
         name = e.target.name;
         value = e.target.value;
         setUser({ ...user, [name]: value });
     }
-    
+
 
     // to post/sve all the details in database
-    const update = async (event) =>
-     {
-        if (!user.firstName || !user.lastName || !user.email || !user.password || !user.pincode || !user.type) 
-        {
+    const update = async (event) => {
+        if (!user.firstName || !user.lastName || !user.email || !user.password || !user.pincode || !user.type) {
             setErrorMsg("Fill all the fields")
             return;
         }
         event.preventDefault();
         const { firstName, lastName, password, address, state, district,
-            email, pincode, no, type } = user;
+            email, pincode, no, type, speciality, exp, fee } = user;
+
         fetch("https://kaas-cd852-default-rtdb.firebaseio.com/userDataRecord.json",
             {
                 method: "POST",
@@ -57,6 +56,9 @@ export default function Signup() {
                     pincode,
                     no,
                     type,
+                    speciality, 
+                    exp, 
+                    fee,
                 }),
             }
         );
@@ -67,9 +69,9 @@ export default function Signup() {
         createUserWithEmailAndPassword(auth, user.email, user.password)
             .then(async (res) => {
                 setSubmitButtonDisabled(false)
-                console.log(res);
                 const User = res.user;
                 await updateProfile(User, {
+
                     displayName: user.firstName,
                 });
                 navigate('/')
@@ -123,7 +125,19 @@ export default function Signup() {
                                 name="no" value={user.no} onChange={handleInputs}
                             />
                         </div>
+                        <div className="signup-partition">
+                            <input type="text" placeholder="Speciality (For Doctor)" required className="signup-input1"
+                                name="speciality" value={user.speciality} onChange={handleInputs}
+                            />
+                            <input type="text" placeholder="Experience (For Doctor)" required className="signup-input1"
+                                name="exp" value={user.exp} onChange={handleInputs}
+                            />
+                        </div>
+
                         <div className="signup-radio">
+                            <input type="text" placeholder="Fee (For Doctor)" required className="signup-input1"
+                                name="fee" value={user.name} onChange={handleInputs}
+                            />
                             <span>Type :</span>
                             <div>
                                 <label>

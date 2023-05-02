@@ -2,12 +2,8 @@ import React from "react";
 import logo from "../images/KAAS-logo.png"
 import { Link , useNavigate} from "react-router-dom";
 import { signOut } from "firebase/auth";
-import {auth} from '../firebase'
+import {auth} from '../controller/firebase'
 export default function NavLower() {
-    const [old, update] = React.useState(false)
-    function changeval() {
-        update(prev => !prev)
-    }
 
     const [old1, update1] = React.useState(false)
     function changeval1() {
@@ -33,28 +29,17 @@ export default function NavLower() {
                     <a href="."><img src={logo} alt="not present" /></a>
                 </div>
                 <div className="nav-lower-menu">
-                    <div><Link to="../landingPage">HOME</Link></div>
-                    <div onMouseEnter={changeval} onMouseLeave={changeval}>ABOUT US
-                        {old && <div className="menu" >
-                            <ul className="nav-menu">
-                                <li>Information</li>
-                                <li>Doctors Profile</li>
-                                <li>Team</li>
-                                <li><Link to="../Appointment/Appointment" >Appointment</Link></li>
-                                <li>Contact</li>
-
-                            </ul>
-                        </div>}
+                    <div><Link to="../landingPage" className="link">HOME</Link></div>
+                    <div >
+                        <Link to="../Appointment" className="link">Appointment</Link>
                     </div>
-                    <div onMouseEnter={changeval1} onMouseLeave={changeval1}>PAGES
+                    <div onMouseEnter={changeval1} onMouseLeave={changeval1} onClick={changeval1}>PAGES
                         {old1 && <div className="menu1" >
                             <ul className="nav-menu">
-                               <li>Departments</li>
-                                <li>Locations</li>
+                                <li><Link to='../Appointment' className="link">Departments</Link></li>
+                                <li><Link to="#body-doc-info"></Link>Services</li>
                                 <li>FAQ</li>
-                                <li>Pricing</li>
                                 <li>Reviews</li>
-
                             </ul>
                         </div>}
                     </div>

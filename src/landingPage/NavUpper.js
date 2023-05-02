@@ -6,14 +6,10 @@ import twitter from "../images/twitter.png"
 import logo from "../images/KAAS-logo.png"
 import { Link , useNavigate} from "react-router-dom";
 import { signOut } from "firebase/auth";
-import {auth} from '../firebase'
+import {auth} from '../controller/firebase'
 export default function NavUpper() {
 
 
-    const [old, update] = React.useState(false)
-    function changeval() {
-        update(prev => !prev)
-    }
 
     const [old1, update1] = React.useState(false)
     function changeval1() {
@@ -59,24 +55,15 @@ export default function NavUpper() {
                 </div>
                 <div className="nav-lower-menu">
                     <div>HOME</div>
-                    <div onMouseEnter={changeval} onMouseLeave={changeval}>ABOUT US
-                        {old && <div className="menu" >
-                            <ul className="nav-menu">
-                                <li>Information</li>
-                                <li>Doctors Profile</li>
-                                <li><Link to='../Appointment/Appointment'>Departments</Link></li>
-                                <li>Contact</li>
-
-                            </ul>
-                        </div>}
+                    <div>
+                         <Link to='../Appointment' className="link">Appointment</Link>
                     </div>
-                    <div onMouseEnter={changeval1} onMouseLeave={changeval1}>PAGES
+                    <div onMouseEnter={changeval1} onMouseLeave={changeval1} onClick={changeval1}>PAGES
                         {old1 && <div className="menu1" >
                             <ul className="nav-menu">
-                                <li>Departments</li>
-                                <li>Locations</li>
+                                <li><Link to='../Appointment' className="link">Departments</Link></li>
+                                <li><Link to="#body-doc-info"></Link>Services</li>
                                 <li>FAQ</li>
-                                <li>Pricing</li>
                                 <li>Reviews</li>
 
                             </ul>

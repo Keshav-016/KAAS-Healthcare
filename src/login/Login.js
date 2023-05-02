@@ -4,7 +4,7 @@ import Bg from "../images/Bg.png"
 import pic from "../images/doctors-bg-img.png"
 import { Link , useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
+import { auth } from "../controller/firebase";
 
 export default function Login() {
 

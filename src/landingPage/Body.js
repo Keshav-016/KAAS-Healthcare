@@ -30,12 +30,12 @@ export default function Body() {
                     </p>
                 </div>
                 <div className="body-bg-button">
-                    <button type="submit" className="btn1">DISCOVER MORE</button>
-                    <button type="submit" className="btn2">KAAS SERVICES</button>
+                <a href="#body-info"> <button type="submit" className="btn1">DISCOVER MORE</button></a>
+                <a href="#body-doc-info"> <button type="submit" className="btn2">KAAS SERVICES</button></a>
                 </div>
             </div>
             {/* ------------------------------------------------------------------------------------------------------------------------ */}
-            <div className="body-info">
+            <div id="body-info">
                 <div className="body-info1">
                     <div className="body-info-detail1">
                         <h2>Your Reports</h2>
@@ -75,7 +75,7 @@ export default function Body() {
                 </div>
             </div>
             {/* --------------------------------------------------------------------------------------------------------------------------- */}
-            <div className="body-doc-info">
+            <div id="body-doc-info">
                 <Fade>
                     <div className="body-doc-info1">
                         <img src={dentist} alt="not present" className="body-doc-img" />
