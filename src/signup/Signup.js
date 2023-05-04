@@ -18,7 +18,7 @@ export default function Signup() {
     const [user, setUser] = new useState
         ({
             firstName: "", lastName: "", password: "", address: "", state: "", district: "",
-            email: "", pincode: "", no: "", speciality:"", exp:"", fee:"", type: "" 
+            email: "", pincode: "", no: "", speciality: "", exp: "", fee: "", type: ""
         });
 
     let name, value;
@@ -56,8 +56,8 @@ export default function Signup() {
                     pincode,
                     no,
                     type,
-                    speciality, 
-                    exp, 
+                    speciality,
+                    exp,
                     fee,
                 }),
             }
@@ -79,7 +79,7 @@ export default function Signup() {
             .catch((err) => {
                 setSubmitButtonDisabled(false)
                 setErrorMsg(err.message);
-                console.log("ERROR - ", err.message);
+                // console.log("ERROR - ", err.message);
             })
     };
 
@@ -138,19 +138,21 @@ export default function Signup() {
                             <input type="text" placeholder="Fee (For Doctor)" required className="signup-input1"
                                 name="fee" value={user.name} onChange={handleInputs}
                             />
-                            <span>Type :</span>
-                            <div>
-                                <label>
-                                    <input type="radio" name="type"
-                                        value="Doctor" onChange={handleInputs} />
-                                    Doctor
-                                </label>
-                            </div>
-                            <div>
-                                <label>
-                                    <input type="radio" name="type" value="Patient" onChange={handleInputs} />
-                                    Patient
-                                </label>
+                            <div className="signup-radio2">
+                                <span>Type :</span>
+                                <div>
+                                    <label>
+                                        <input type="radio" name="type"
+                                            value="Doctor" onChange={handleInputs} />
+                                        Doctor
+                                    </label>
+                                </div>
+                                <div>
+                                    <label>
+                                        <input type="radio" name="type" value="Patient" onChange={handleInputs} />
+                                        Patient
+                                    </label>
+                                </div>
                             </div>
                         </div>
                         <b className="errorHandle">{errorMsg}</b>

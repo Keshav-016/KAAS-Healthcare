@@ -18,11 +18,11 @@ export const FirebaseProvider = (props) => {
         const snapshot = await get(child(ref(database), "userDataRecord"));
         const data = snapshot.val();
         setuserDetails(data);
-        console.log("Userdata is fetched", data);
-        let keys = Object.keys(data);
-        const snapshot2 = await get(child(ref(database), "userDataRecord"+"/"+keys[0]));
-        const data2 = snapshot2.val();
-        console.log(data2);
+        // console.log("Userdata is fetched", data);
+        // let keys = Object.keys(data);
+        // const snapshot2 = await get(child(ref(database), "userDataRecord"+"/"+keys[0]));
+        // const data2 = snapshot2.val();
+        // console.log(data2);
         return data;
       };
       const putData = (key,data) => {

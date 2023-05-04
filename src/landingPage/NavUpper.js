@@ -28,24 +28,33 @@ export default function NavUpper() {
     }
 
 
+    const handleClick =()=>{
+        window.location.replace('https://www.facebook.com/')
+    }
+    const handleClick1 =()=>{
+        window.location.replace('https://twitter.com/i/flow/login')
+    }
+    const handleClick2 =()=>{
+        window.location.replace('https://in.linkedin.com/')
+    }
     //------------------------------------------------------------------------------------------------------------
     return (
         <main>
             <nav className="nav-upper">
                 <div className="nav-phn">
                     <img src={phn} alt="not present" className="nav-phnIcon" />
-                    <a href=".">
+                    <div>
                         <div>
                             <p className="nav-phnNo">Call us </p>
                             <p className="nav-phnNo">+91 652108972</p>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div className="nav-iconss">
                     <input type="text" placeholder="Looking for..." className="nav-search"></input>
-                    <a href="."><img src={fb} alt="not present" className="nav-icon" /></a>
-                    <a href="."><img src={twitter} alt="not present" className="nav-icon" /></a>
-                    <a href="."><img src={linkdin} alt="not present" className="nav-icon" /></a>
+                    <div onClick={handleClick}><img src={fb} alt="not present" className="nav-icon" /></div>
+                    <div onClick={handleClick1}><img src={twitter} alt="not present" className="nav-icon" /></div>
+                    <div onClick={handleClick2}><img src={linkdin} alt="not present" className="nav-icon" /></div>
                 </div>
             </nav>
             {/* ----------------------------------------------------------------------------------------------------------------- */}

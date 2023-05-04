@@ -33,7 +33,7 @@ export default function Login() {
     const update = () => 
     {
         // heck wether all the fields are filled or not
-        if (!user.email ||!user.password) {
+        if (!user.email || !user.password) {
             setErrorMsg("Fill all the fields")
             return;
         }
@@ -52,7 +52,7 @@ export default function Login() {
     }
 
     return (
-        <div>
+        <div className="login-container">
             <div style={{ backgroundImage: `url(${Bg})` }} className="bg-image" />
             <img src={logo} alt="not present" className="logo" />
             <div className="bg-shade">

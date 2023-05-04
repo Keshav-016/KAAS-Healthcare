@@ -14,18 +14,18 @@ export default function Appointment(props) {
   };
 
   const check = () => {
-    const filteredUsers = props.userData.filter((user) => user.Pincode === value);
-    setFilteredData(filteredUsers);
+    const filtereddoctors = props.doctorData.filter((doctor) => doctor.Pincode === value);
+    setFilteredData(filtereddoctors);
   };
 
-  const docElements = filteredData.map((user) => (
-    <DocInfo FirstName={user.firstName} 
-    Address={user.Address} 
-    Pincode={user.Pincode} 
-    Speciality={user.Speciality}
-    Experience={user.Experience}
-    Fee={user.Fee}
-    LastName={user.lastName}
+  const docElements = filteredData.map((doctor) => (
+    <DocInfo FirstName={doctor.firstName} 
+    Address={doctor.Address} 
+    Pincode={doctor.Pincode} 
+    Speciality={doctor.Speciality}
+    Experience={doctor.Experience}
+    Fee={doctor.Fee}
+    LastName={doctor.lastName}
      />
   ));
 
@@ -51,9 +51,9 @@ export default function Appointment(props) {
               type="text"
               placeholder="Pincode.."
               onChange={handleChange}
-              className="search"
+              className="pin-search"
             />
-            <button type="button" onClick={check}>
+            <button type="button" onClick={check} className="pin-btn"> 
               Filter
             </button>
           </div>

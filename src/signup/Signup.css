@@ -72,12 +72,16 @@
     color: white;
     display: flex;
     gap: 40px;
-    margin-top: 10px;
+
 }
-.signup-radio div{
+.signup-radio2 {
+    display: flex;
+    gap: 40px;
+}
+.signup-radio2 div{
     margin-top: 20px;
 }
-.signup-radio span{
+.signup-radio2 span{
     margin-top: 20px;
 }
 
@@ -116,12 +120,12 @@
     }
 
     .signup-button {
-        margin-left: 19%;
+        margin-left: 20%;
     }
 
     .signup-bg-shades,
     .signup-bg-img {
-        height: 140vh;
+        height: 180vh;
     }
 
     .signup-textarea {
@@ -130,5 +134,11 @@
 
     .signup-form {
         margin-top: 50px;
+    }
+    .signup-radio {
+        flex-direction: column;
+    }
+    .signup-radio2 span{
+        margin-left: 10px;
     }
 }

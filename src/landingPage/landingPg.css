@@ -65,6 +65,9 @@ a {
     display: flex;
     gap: 15px;
 }
+.nav-iconss div{
+    cursor: pointer;
+}
 
 .nav-phnNo {
     font-size: 13px;
@@ -665,6 +668,9 @@ h1 b {
     padding-right: 5%;
     padding-top: 30px;
     font-size: 13px;
+}
+.footer-content-value p{
+    cursor: pointer;
 }
 
 a {

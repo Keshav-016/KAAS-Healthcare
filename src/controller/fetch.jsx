@@ -2,34 +2,35 @@ import { useEffect, useState } from "react";
 import { useFirebase } from "./Firebaseprovider";
 import Appointment from "../Appointment/Appointment";
 
-const UserdataFetch = (props) => {
+const DoctordataFetch = (props) => {
   const firebase = useFirebase();
-  const [userData, setUserData] = useState([]);
+  const [doctorData, setDoctorData] = useState([]);
 
   useEffect(() => {
     if (firebase.userDetails) {
       firebase.fetchuserData().then(data => {
         const keys = Object.keys(data);
-        const userArray = keys.map(key => {
-          const user = data[key];
-          return { firstName: user.firstName, 
-            lastName: user.lastName,
-            Address: user.address, 
-            Pincode : user.pincode,
-            Speciality : user.speciality,
-            Experience : user.exp,
-            Fee : user.fee};
+        const doctorArray = keys.map(key => {
+          const doctor = data[key];
+          return { 
+            firstName : doctor.firstName, 
+            lastName : doctor.lastName,
+            Address : doctor.address, 
+            Pincode : doctor.pincode,
+            Speciality : doctor.speciality,
+            Experience : doctor.exp,
+            Fee : doctor.fee};
         });
-        setUserData(userArray);
+        setDoctorData(doctorArray);
       });
     }
   }, [firebase]);
 
   return (
     <div>
-      {userData.length > 0 && <Appointment userData={userData} />}
+      {doctorData.length > 0 && <Appointment doctorData={doctorData} />}
     </div>
   );
 };
 
-export default UserdataFetch;
+export default DoctordataFetch;
