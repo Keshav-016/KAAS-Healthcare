@@ -19,27 +19,6 @@ The Patient Appointment System is a web application that enables users to store 
 
 * JavaScript: JavaScript is used to add interactivity and functionality to the application, making it dynamic and user-friendly.
 
-## Getting Started
-To run the Patient Appointment System locally, follow these steps:
-
-1. Clone the repository:
-bash
-git clone https://github.com/YourUsername/Patient-Appointment-System.git
-cd Patient-Appointment-System
-
-2. Install dependencies:
-npm install
-
-1. Set up Firebase:
-
-* Create a Firebase project and obtain the Firebase configuration details (apiKey, authDomain, databaseURL, projectId, storageBucket, messagingSenderId, appId).
-* Replace the configuration details in the appropriate file where Firebase is initialized.
-
-2. Run the application:
-
-sql
-npm start
-
 ## Contributing
 
 We welcome contributions to enhance the functionality and usability of the Patient Appointment System. If you find any bugs or have ideas for improvements, please open an issue or submit a pull request with your changes.
