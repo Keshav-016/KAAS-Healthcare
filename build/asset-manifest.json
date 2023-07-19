@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/KAAS-Healthcare/static/css/main.4ca5de92.css",
+    "main.js": "/KAAS-Healthcare/static/js/main.771eaceb.js",
+    "static/media/background.jpg": "/KAAS-Healthcare/static/media/background.8ddd8a8a12d6d587335d.jpg",
+    "static/media/reviewImg.jpg": "/KAAS-Healthcare/static/media/reviewImg.a2d5d2c2fe30b717fb1e.jpg",
+    "static/media/Bg.png": "/KAAS-Healthcare/static/media/Bg.306179e345c753ff47c1.png",
+    "static/media/dental.png": "/KAAS-Healthcare/static/media/dental.cdeb52b25a57419eedd6.png",
+    "static/media/doctors-bg-img.png": "/KAAS-Healthcare/static/media/doctors-bg-img.3f1b56ce44fa46c0ed52.png",
+    "static/media/patient4.jpg": "/KAAS-Healthcare/static/media/patient4.922a6817052fd0c238de.jpg",
+    "static/media/patient3.jpg": "/KAAS-Healthcare/static/media/patient3.ced3b2e7f3e566de9400.jpg",
+    "static/media/patient2.jpg": "/KAAS-Healthcare/static/media/patient2.0904ae3649c00deb217a.jpg",
+    "static/media/patient1.jpg": "/KAAS-Healthcare/static/media/patient1.7145424e302fb8bf8f78.jpg",
+    "static/media/skin.jpg": "/KAAS-Healthcare/static/media/skin.c47ec54d1c6e5fe3816a.jpg",
+    "static/media/eye.jpg": "/KAAS-Healthcare/static/media/eye.ebc0803bf943ca48a3e0.jpg",
+    "static/media/phn-icon.png": "/KAAS-Healthcare/static/media/phn-icon.ec3ba5c531b77755c740.png",
+    "static/media/KAAS-logo.png": "/KAAS-Healthcare/static/media/KAAS-logo.e68f043db13c3a964369.png",
+    "static/media/KAAS-logo-white.png": "/KAAS-Healthcare/static/media/KAAS-logo-white.f3d95f4f4563e33eee94.png",
+    "static/media/thumb.png": "/KAAS-Healthcare/static/media/thumb.24001c2211f2a545a041.png",
+    "index.html": "/KAAS-Healthcare/index.html",
+    "main.4ca5de92.css.map": "/KAAS-Healthcare/static/css/main.4ca5de92.css.map",
+    "main.771eaceb.js.map": "/KAAS-Healthcare/static/js/main.771eaceb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4ca5de92.css",
+    "static/js/main.771eaceb.js"
+  ]
+}
