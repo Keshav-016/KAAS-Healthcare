@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 import eye from "../images/eye.jpg"
 import dentist from "../images/dental.png"
 import skin from "../images/skin.jpg"
@@ -116,7 +116,7 @@ export default function Body() {
                     </div>
                 </Fade>
 
-                <Fade delay={300}>
+                <Fade delay={500}>
                     <div className="body-doc-info1">
                         <img src={eye} alt="not present" className="body-doc-img" />
                         <div className="body-doc-detail">
@@ -138,7 +138,7 @@ export default function Body() {
                     </div>
                 </Fade>
 
-                <Fade delay={600}>
+                <Fade delay={800}>
                     <div className="body-doc-info1">
                         <img src={skin} alt="not present" className="body-doc-img" />
                         <div className="body-doc-detail">
@@ -163,7 +163,7 @@ export default function Body() {
             <div className="review-bg">
                 <span className="review-bg-color" />
 
-                <Fade left>
+                <Fade direction={'left'}>
                     <div className="body-user-exp">
                         <p>A good word means a lot</p>
                         <h1><u>Pa</u>tient <b>testimonials</b> </h1>
@@ -172,7 +172,7 @@ export default function Body() {
                 </Fade>
                 <div className="body-user-img-detail">
                     <div className="review1">
-                        <Fade bottom>
+                        <Fade direction={'up'}>
                             <div className="body-user-img-detail1">
                                 <img src={patient1} alt="not present" className="body-user-img" />
                                 <div className="body-user-review">
@@ -185,7 +185,7 @@ export default function Body() {
                                 </div>
                             </div>
                         </Fade>
-                        <Fade bottom delay={200}>
+                        <Fade direction={'up'} delay={200}>
                             <div className="body-user-img-detail1">
                                 <img src={patient2} alt="not present" className="body-user-img" />
                                 <div className="body-user-review">
@@ -199,7 +199,7 @@ export default function Body() {
                         </Fade>
                     </div>
                     <div className="review1">
-                        <Fade bottom delay={400}>
+                        <Fade direction={'up'} delay={400}>
                             <div className="body-user-img-detail1">
                                 <img src={patient3} alt="not present" className="body-user-img" />
                                 <div className="body-user-review">
@@ -211,7 +211,7 @@ export default function Body() {
                                 </div>
                             </div>
                         </Fade>
-                        <Fade bottom delay={600}>
+                        <Fade direction={'up'} delay={600}>
                             <div className="body-user-img-detail1">
                                 <img src={patient4} alt="not present" className="body-user-img" />
                                 <div className="body-user-review">
@@ -225,7 +225,7 @@ export default function Body() {
                         </Fade>
                     </div>
                 </div>
-                <Fade delay={700} >
+                <Fade delay={1000} >
                     <button type="submit" className="body-user-review-btn"><b>READ MORE TESTIMONIALS</b></button>
                 </Fade>
             </div>
