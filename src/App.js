@@ -35,7 +35,9 @@ export default function App() {
         return (
             <div>
                 {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
-                <BrowserRouter basename="/KAAS-Healthcare">
+                <BrowserRouter 
+            // basename="/KAAS-Healthcare"
+                >
                     <Routes>
                         <Route path='/signup' element={<Signup />} />
                         <Route path='/' exact element={<Login />} />
@@ -49,7 +51,9 @@ export default function App() {
     else {
         return (
             <div>
-                <BrowserRouter basename="/KAAS-Healthcare">
+                <BrowserRouter 
+            // basename="/KAAS-Healthcare"
+                >
                     <Routes>
                         <Route path='/signup' element={<Signup />} />
                         <Route path='/' exact element={<Login />} />
